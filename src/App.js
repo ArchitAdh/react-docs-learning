@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import MyButton from "./components/MyButton";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           Learn React
         </a>
       </header>
+      {/* everything... */}
+      <section className="App-section">
+        <MyButton />
+      </section>
     </div>
   );
 }
