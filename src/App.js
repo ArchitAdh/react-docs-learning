@@ -4,6 +4,8 @@ import MyButton from "./components/MyButton";
 import Heading from "./components/Heading";
 import AdminPanel from "./components/AdminPanel";
 import LoginForm from "./components/LoginForm";
+import EventButton from "./components/EventButton";
+
 function App() {
   const isLoggedIn = true;
 
@@ -33,6 +35,9 @@ function App() {
       <section className="Conditional-section">
         {isLoggedIn ? <AdminPanel /> : <LoginForm />}
       </section>
+
+      {/* handling events */}
+      <EventButton />
     </div>
   );
 }
