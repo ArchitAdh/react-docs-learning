@@ -5,9 +5,17 @@ import Heading from "./components/Heading";
 import AdminPanel from "./components/AdminPanel";
 import LoginForm from "./components/LoginForm";
 import EventButton from "./components/EventButton";
+import { useState } from "react";
+import PropsButton from "./components/PropsButton";
 
 function App() {
   const isLoggedIn = true;
+
+  // props practice
+
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => setCount(count + 1);
 
   return (
     <div className="App">
@@ -38,6 +46,11 @@ function App() {
 
       {/* handling events */}
       <EventButton />
+
+      {/* props handling  */}
+      <h1>counters that update together</h1>
+      <PropsButton count={count} onClick={handleClick} />
+      <PropsButton count={count} onClick={handleClick} />
     </div>
   );
 }
