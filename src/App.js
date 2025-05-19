@@ -1,8 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import MyButton from "./components/MyButton";
-
+import Heading from "./components/Heading";
+import AdminPanel from "./components/AdminPanel";
+import LoginForm from "./components/LoginForm";
 function App() {
+  const isLoggedIn = true;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,6 +26,12 @@ function App() {
       {/* everything... */}
       <section className="App-section">
         <MyButton />
+        <Heading></Heading>
+      </section>
+
+      {/* conditional Rendering */}
+      <section className="Conditional-section">
+        {isLoggedIn ? <AdminPanel /> : <LoginForm />}
       </section>
     </div>
   );
